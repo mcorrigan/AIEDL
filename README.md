@@ -5,7 +5,7 @@ AIEDL is an extended Edit Decision List format that supports AI-powered video, a
 ## Structure
 
 - **`sample.ai.edl`**: Example AIEDL file demonstrating all supported operations
-- **`AIEDL_SPECIFICATION.md`**: Complete specification and documentation
+- **`SPECIFICATION.md`**: Complete specification and documentation
 - **`python/`**: Python implementation (parser, builder, validator)
 - **`cpp/`**: C++ implementation (header-only library)
 - **`javascript/`**: JavaScript/TypeScript implementation (Node.js and browser)
@@ -123,7 +123,7 @@ const result = validator.validate(file);
 
 ## Documentation
 
-See [AIEDL_SPECIFICATION.md](AIEDL_SPECIFICATION.md) for complete documentation including:
+See [SPECIFICATION.md](SPECIFICATION.md) for complete documentation including:
 - File format specification
 - All supported operations
 - Metadata fields
