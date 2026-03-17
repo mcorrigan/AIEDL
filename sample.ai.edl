@@ -1,0 +1,51 @@
+TITLE: AI Edited Movie
+FPS: 24
+AI_VERSION: 1.0
+
+001  AX       V     C        00:00:00:00 00:00:05:00 00:00:10:00 00:00:15:00
+* FROM CLIP NAME: Scene1
+
+002  AI       V     INPAINT  00:00:12:00 00:00:14:00
+* REGION: (x1:.1, y1:.2, x2:.3, y2:.4) # percentages
+* ACTION: REMOVE_OBJECT # REMOVE_OBJECT # ADD_OBJECT, REPLACE_OBJECT, ADD_COLOR, RESTORE
+* TARGET: Make the chair green
+* STRENGTH: 0.8
+* MODEL: stable-diffusion-v2
+* SEED: 123456789
+
+003  AI       V     INPAINT  00:00:20:00 00:00:22:00
+* REGION: (x1:.5, y1:.6, x2:.7, y2:.8) 
+* ACTION: ADD_OBJECT
+* TARGET: Maple tree with fall colored leaves
+* STRENGTH: 0.5
+* MODEL: dall-e-3
+* SEED: 424242
+
+004  AX       A1    MUTE     00:01:10:12 00:01:12:05 00:01:10:12 00:01:12:05
+* DESCRIPTION: Mute profanity in dialogue ("explicit word").
+
+005  AX       A1    REPLACE  00:02:15:08 00:02:16:20 00:02:15:08 00:02:16:20
+* REPLACEMENT: "[CENSORED]"
+* DESCRIPTION: Replace explicit word with "CENSORED".
+
+006  AX       A1    MUTE     00:01:10:12 00:01:12:05 00:01:10:12 00:01:12:05
+* CHANNEL: 2
+* DESCRIPTION: Mute explicit dialogue in channel 2 only.
+
+007  AX       S     REPLACE  00:03:00:00 00:03:05:00 00:03:00:00 00:03:05:00
+* ORIGINAL_TEXT: "What the hell are you doing?"
+* REPLACEMENT: "What are you doing?"
+* DESCRIPTION: Replace profanity in captions with clean text.
+
+008  AX       S     REPLACE  00:04:10:12 00:04:12:05 00:04:10:12 00:04:12:05
+* ORIGINAL_TEXT: "explicit word"
+* REPLACEMENT: "[CENSORED]"
+* DESCRIPTION: Replace explicit word in captions with "[CENSORED]".
+
+009  AX       S     MUTE     00:05:20:00 00:05:22:00 00:05:20:00 00:05:22:00
+* DESCRIPTION: Hide captions during this time period (no subtitles displayed).
+
+010  AX       S     MODIFY   00:06:15:00 00:06:18:00 00:06:15:00 00:06:18:00
+* ORIGINAL_TEXT: "He said a bad word"
+* REPLACEMENT: "He said something inappropriate"
+* DESCRIPTION: Modify caption text to be more appropriate.
